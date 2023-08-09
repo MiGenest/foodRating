@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>List of Foods</title>
+  <link rel="stylesheet" href="Csstype.css">
+  <script src="./FoodRating.js" type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCWvk5X6HlQWHmLjMJUc1xvuvkQ00fqOTU",
+    authDomain: "foodratingwebiz.firebaseapp.com",
+    projectId: "foodratingwebiz",
+    storageBucket: "foodratingwebiz.appspot.com",
+    messagingSenderId: "450428047694",
+    appId: "1:450428047694:web:eb1092abe3f21545428e1f",
+    measurementId: "G-9EFVMZWCSS"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+</head>
+<body>
+    <div>
+        <h1>Shawarma List</h1>
+        
+        <ul class="food-list">
+            <div class="element">
+                <fieldset>
+                <li>
+                <img src="Photos/ShawarmaOrbelianze.webp" alt="Food 1">
+                    <legend>Craft Shawarma Orbelianze</legend>
+                    <div id="enterDetails">
+                        <h4>Name</h4>
+                        <input id="enterName" type="text">
+
+                        <h4>Comment</h4>
+                        <input id="enterComment" type="text">
+
+                        <button id="insertBtn">Comment</button>
+
+                    </div>
+                    <input type="radio" id="food1-1" name="food1" value="1">
+                    <label for="food1-1">1</label>
+                    <input type="radio" id="food1-2" name="food1" value="2">
+                    <label for="food1-2">2</label>
+                    <input type="radio" id="food1-3" name="food1" value="3">
+                    <label for="food1-3">3</label>
+                    <input type="radio" id="food1-4" name="food1" value="4">
+                    <label for="food1-4">4</label>
+                    <input type="radio" id="food1-5" name="food1" value="5">
+                    <label for="food1-5">5</label>
+                    <button type="button" onClick=submitForm>Submit</button>
+                </li>
+            </fieldset>
+            </div>
+            <div class="element">
+                <fieldset>
+                    <li>
+                    <img src="Photos/BlackShawarma.webp" alt="Food 1">
+                        <legend>Black Shawarma</legend>
+                        <input type="radio" id="food1-1" name="food1" value="1">
+                        <label for="food1-1">1</label>
+                        <input type="radio" id="food1-2" name="food1" value="2">
+                        <label for="food1-2">2</label>
+                        <input type="radio" id="food1-3" name="food1" value="3">
+                        <label for="food1-3">3</label>
+                        <input type="radio" id="food1-4" name="food1" value="4">
+                        <label for="food1-4">4</label>
+                        <input type="radio" id="food1-5" name="food1" value="5">
+                        <label for="food1-5">5</label>
+                        <button type="button" onclick="submitForm()">Submit</button>
+                    </li>
+                </fieldset>
+            </div>
+            <div class="element">
+                <fieldset>
+                    <li>
+                    <img src="Photos/marge.jpeg" alt="Food 1">
+                        <legend>Marge Shawarma</legend>
+                        <input type="radio" id="food1-1" name="food1" value="1">
+                        <label for="food1-1">1</label>
+                        <input type="radio" id="food1-2" name="food1" value="2">
+                        <label for="food1-2">2</label>
+                        <input type="radio" id="food1-3" name="food1" value="3">
+                        <label for="food1-3">3</label>
+                        <input type="radio" id="food1-4" name="food1" value="4">
+                        <label for="food1-4">4</label>
+                        <input type="radio" id="food1-5" name="food1" value="5">
+                        <label for="food1-5">5</label>
+                        <button type="button" onclick="submitForm()">Submit</button>
+                    </li>
+                </fieldset>
+            </div>
+            <div class="element">
+                <fieldset>
+                    <li>
+                    <img src="Photos/GldanisShaurma.jpeg" alt="Food 1">
+                        <legend>Gldanis Shaurma Dzveli Gemoti</legend>
+                        <input type="radio" id="food1-1" name="food1" value="1">
+                        <label for="food1-1">1</label>
+                        <input type="radio" id="food1-2" name="food1" value="2">
+                        <label for="food1-2">2</label>
+                        <input type="radio" id="food1-3" name="food1" value="3">
+                        <label for="food1-3">3</label>
+                        <input type="radio" id="food1-4" name="food1" value="4">
+                        <label for="food1-4">4</label>
+                        <input type="radio" id="food1-5" name="food1" value="5">
+                        <label for="food1-5">5</label>
+                        <button type="button" onclick="submitForm()">Submit</button>
+                    </li>
+                </fieldset>
+            </div>
+            <div class="element">
+                <fieldset>
+                    <li>
+                    <img src="Photos/macshawarma.jpeg" alt="Food 1">
+                        <legend>Mac Shawarma</legend>
+                        <input type="radio" id="food1-1" name="food1" value="1">
+                        <label for="food1-1">1</label>
+                        <input type="radio" id="food1-2" name="food1" value="2">
+                        <label for="food1-2">2</label>
+                        <input type="radio" id="food1-3" name="food1" value="3">
+                        <label for="food1-3">3</label>
+                        <input type="radio" id="food1-4" name="food1" value="4">
+                        <label for="food1-4">4</label>
+                        <input type="radio" id="food1-5" name="food1" value="5">
+                        <label for="food1-5">5</label>
+                        <button type="button" onclick="submitForm()">Submit</button>
+                    </li>
+                </fieldset>
+            </div>
+            <div class="element">
+                <fieldset>
+                    <li>
+                    <img src="Photos/BrazzersShawarma.jpeg" alt="Food 1">
+                        <legend>BroZZers Shawarma</legend>
+                        <input type="radio" id="food1-1" name="food1" value="1">
+                        <label for="food1-1">1</label>
+                        <input type="radio" id="food1-2" name="food1" value="2">
+                        <label for="food1-2">2</label>
+                        <input type="radio" id="food1-3" name="food1" value="3">
+                        <label for="food1-3">3</label>
+                        <input type="radio" id="food1-4" name="food1" value="4">
+                        <label for="food1-4">4</label>
+                        <input type="radio" id="food1-5" name="food1" value="5">
+                        <label for="food1-5">5</label>
+                        <button type="button" onclick="submitForm()">Submit</button>
+                    </li>
+                </fieldset>
+            </div>
+            <div class="element">
+                <fieldset>
+                    <li>
+                    <img src="Photos/QuteShawarmajpg.jpg" alt="Food 1">
+                        <legend>Qute Shawarma</legend>
+                        <input type="radio" id="food1-1" name="food1" value="1">
+                        <label for="food1-1">1</label>
+                        <input type="radio" id="food1-2" name="food1" value="2">
+                        <label for="food1-2">2</label>
+                        <input type="radio" id="food1-3" name="food1" value="3">
+                        <label for="food1-3">3</label>
+                        <input type="radio" id="food1-4" name="food1" value="4">
+                        <label for="food1-4">4</label>
+                        <input type="radio" id="food1-5" name="food1" value="5">
+                        <label for="food1-5">5</label>
+                        <button type="button" onclick="submitForm()">Submit</button>
+                    </li>
+                </fieldset>
+            </div>
+            <div class="element">
+                <fieldset>
+                    <li>
+                    <img src="Photos/OKshawarma.jpeg   " alt="Food 1">
+                        <legend>OK Shawarma</legend>
+                        <input type="radio" id="food1-1" name="food1" value="1">
+                        <label for="food1-1">1</label>
+                        <input type="radio" id="food1-2" name="food1" value="2">
+                        <label for="food1-2">2</label>
+                        <input type="radio" id="food1-3" name="food1" value="3">
+                        <label for="food1-3">3</label>
+                        <input type="radio" id="food1-4" name="food1" value="4">
+                        <label for="food1-4">4</label>
+                        <input type="radio" id="food1-5" name="food1" value="5">
+                        <label for="food1-5">5</label>
+                        <button type="button" onclick="submitForm()">Submit</button>
+                    </li>
+                </fieldset>
+            </div>
+        </ul>
+        <div>
+            <h1>Asian List</h1>
+            
+            <ul class="food-list">
+                <div class="element">
+                    <fieldset>
+                    <li>
+                    <img src="Photos/AnsoAtria.jpg" alt="Food 1">
+                        <legend>Anso</legend>
+                        <input type="radio" id="food1-1" name="food1" value="1">
+                        <label for="food1-1">1</label>
+                        <input type="radio" id="food1-2" name="food1" value="2">
+                        <label for="food1-2">2</label>
+                        <input type="radio" id="food1-3" name="food1" value="3">
+                        <label for="food1-3">3</label>
+                        <input type="radio" id="food1-4" name="food1" value="4">
+                        <label for="food1-4">4</label>
+                        <input type="radio" id="food1-5" name="food1" value="5">
+                        <label for="food1-5">5</label>
+                        <button type="button" onclick="submitForm()">Submit</button>
+                    </li>
+                </fieldset>
+                </div>
+                <div class="element">
+                    <fieldset>
+                        <li>
+                        <img src="Photos/pho.webp" alt="Food 1">
+                            <legend>Pho</legend>
+                            <input type="radio" id="food1-1" name="food1" value="1">
+                            <label for="food1-1">1</label>
+                            <input type="radio" id="food1-2" name="food1" value="2">
+                            <label for="food1-2">2</label>
+                            <input type="radio" id="food1-3" name="food1" value="3">
+                            <label for="food1-3">3</label>
+                            <input type="radio" id="food1-4" name="food1" value="4">
+                            <label for="food1-4">4</label>
+                            <input type="radio" id="food1-5" name="food1" value="5">
+                            <label for="food1-5">5</label>
+                            <button type="button" onclick="submitForm()">Submit</button>
+                        </li>
+                    </fieldset>
+                </div>
+                <div class="element">
+                    <fieldset>
+                        <li>
+                        <img src="Photos/FireWok.webp" alt="Food 1">
+                            <legend>Fire Wok</legend>
+                            <input type="radio" id="food1-1" name="food1" value="1">
+                            <label for="food1-1">1</label>
+                            <input type="radio" id="food1-2" name="food1" value="2">
+                            <label for="food1-2">2</label>
+                            <input type="radio" id="food1-3" name="food1" value="3">
+                            <label for="food1-3">3</label>
+                            <input type="radio" id="food1-4" name="food1" value="4">
+                            <label for="food1-4">4</label>
+                            <input type="radio" id="food1-5" name="food1" value="5">
+                            <label for="food1-5">5</label>
+                            <button type="button" onclick="submitForm()">Submit</button>
+                        </li>
+                    </fieldset>
+                </div>
+                <div class="element">
+                    <fieldset>
+                        <li>
+                        <img src="Photos/Umami.jpeg" alt="Food 1">
+                            <legend>Umami Asian Fusion</legend>
+                            <input type="radio" id="food1-1" name="food1" value="1">
+                            <label for="food1-1">1</label>
+                            <input type="radio" id="food1-2" name="food1" value="2">
+                            <label for="food1-2">2</label>
+                            <input type="radio" id="food1-3" name="food1" value="3">
+                            <label for="food1-3">3</label>
+                            <input type="radio" id="food1-4" name="food1" value="4">
+                            <label for="food1-4">4</label>
+                            <input type="radio" id="food1-5" name="food1" value="5">
+                            <label for="food1-5">5</label>
+                            <button type="button" onclick="submitForm()">Submit</button>
+                        </li>
+                    </fieldset>
+                </div>
+                <div class="element">
+                    <fieldset>
+                        <li>
+                        <img src="Photos/kytaia.webp" alt="Food 1">
+                            <legend>Kitayka</legend>
+                            <input type="radio" id="food1-1" name="food1" value="1">
+                            <label for="food1-1">1</label>
+                            <input type="radio" id="food1-2" name="food1" value="2">
+                            <label for="food1-2">2</label>
+                            <input type="radio" id="food1-3" name="food1" value="3">
+                            <label for="food1-3">3</label>
+                            <input type="radio" id="food1-4" name="food1" value="4">
+                            <label for="food1-4">4</label>
+                            <input type="radio" id="food1-5" name="food1" value="5">
+                            <label for="food1-5">5</label>
+                            <button type="button" onclick="submitForm()">Submit</button>
+                        </li>
+                    </fieldset>
+                </div>
+                <div class="element">
+                    <fieldset>
+                        <li>
+                        <img src="Photos/RameKaiOrbeliani.webp" alt="Food 1">
+                            <legend>Ramekai Orbeliani</legend>
+                            <input type="radio" id="food1-1" name="food1" value="1">
+                            <label for="food1-1">1</label>
+                            <input type="radio" id="food1-2" name="food1" value="2">
+                            <label for="food1-2">2</label>
+                            <input type="radio" id="food1-3" name="food1" value="3">
+                            <label for="food1-3">3</label>
+                            <input type="radio" id="food1-4" name="food1" value="4">
+                            <label for="food1-4">4</label>
+                            <input type="radio" id="food1-5" name="food1" value="5">
+                            <label for="food1-5">5</label>
+                            <button type="button" onclick="submitForm()">Submit</button>
+                        </li>
+                    </fieldset>
+                </div>
+                <div class="element">
+                    <fieldset>
+                        <li>
+                        <img src="Photos/KoreanHouse.Jpeg" alt="Food 1">
+                            <legend>Korean House</legend>
+                            <input type="radio" id="food1-1" name="food1" value="1">
+                            <label for="food1-1">1</label>
+                            <input type="radio" id="food1-2" name="food1" value="2">
+                            <label for="food1-2">2</label>
+                            <input type="radio" id="food1-3" name="food1" value="3">
+                            <label for="food1-3">3</label>
+                            <input type="radio" id="food1-4" name="food1" value="4">
+                            <label for="food1-4">4</label>
+                            <input type="radio" id="food1-5" name="food1" value="5">
+                            <label for="food1-5">5</label>
+                            <button type="button" onclick="submitForm()">Submit</button>
+                        </li>
+                    </fieldset>
+                </div>
+                <div class="element">
+                    <fieldset>
+                        <li>
+                        <img src="Photos/JackieChan.jpeg" alt="Food 1">
+                            <legend>Jackie Chan</legend>
+                            <input type="radio" id="food1-1" name="food1" value="1">
+                            <label for="food1-1">1</label>
+                            <input type="radio" id="food1-2" name="food1" value="2">
+                            <label for="food1-2">2</label>
+                            <input type="radio" id="food1-3" name="food1" value="3">
+                            <label for="food1-3">3</label>
+                            <input type="radio" id="food1-4" name="food1" value="4">
+                            <label for="food1-4">4</label>
+                            <input type="radio" id="food1-5" name="food1" value="5">
+                            <label for="food1-5">5</label>
+                            <button type="button" onclick="submitForm()">Submit</button>
+                        </li>
+                    </fieldset>
+                </div>
+            </ul>
+    </div>>
+    <div>
+        <h1>Burgers, Mac etc..</h1>
+        
+        <ul class="food-list">
+            <div class="element">
+                <fieldset>
+                <li>
+                <img src="Photos/MacDonalds.jpeg" alt="Food 1">
+                    <legend>McDonald's</legend>
+                    <input type="radio" id="food1-1" name="food1" value="1">
+                    <label for="food1-1">1</label>
+                    <input type="radio" id="food1-2" name="food1" value="2">
+                    <label for="food1-2">2</label>
+                    <input type="radio" id="food1-3" name="food1" value="3">
+                    <label for="food1-3">3</label>
+                    <input type="radio" id="food1-4" name="food1" value="4">
+                    <label for="food1-4">4</label>
+                    <input type="radio" id="food1-5" name="food1" value="5">
+                    <label for="food1-5">5</label>
+                    <button type="button" onclick="submitForm()">Submit</button>
+                </li>
+            </fieldset>
+            </div>
+            <div class="element">
+                <fieldset>
+                <li>
+                <img src="Photos/BigSams.jpeg" alt="Food 1">
+                    <legend>Big Sam's</legend>
+                    <input type="radio" id="food1-1" name="food1" value="1">
+                    <label for="food1-1">1</label>
+                    <input type="radio" id="food1-2" name="food1" value="2">
+                    <label for="food1-2">2</label>
+                    <input type="radio" id="food1-3" name="food1" value="3">
+                    <label for="food1-3">3</label>
+                    <input type="radio" id="food1-4" name="food1" value="4">
+                    <label for="food1-4">4</label>
+                    <input type="radio" id="food1-5" name="food1" value="5">
+                    <label for="food1-5">5</label>
+                    <button type="button" onclick="submitForm()">Submit</button>
+                </li>
+            </fieldset>
+            </div>
+            <div class="element">
+                <fieldset>
+                <li>
+                <img src="Photos/BurgerBar.jpeg" alt="Food 1">
+                    <legend>Burger Bar</legend>
+                    <input type="radio" id="food1-1" name="food1" value="1">
+                    <label for="food1-1">1</label>
+                    <input type="radio" id="food1-2" name="food1" value="2">
+                    <label for="food1-2">2</label>
+                    <input type="radio" id="food1-3" name="food1" value="3">
+                    <label for="food1-3">3</label>
+                    <input type="radio" id="food1-4" name="food1" value="4">
+                    <label for="food1-4">4</label>
+                    <input type="radio" id="food1-5" name="food1" value="5">
+                    <label for="food1-5">5</label>
+                    <button type="button" onclick="submitForm()">Submit</button>
+                </li>
+            </fieldset>
+            </div>
+            <div class="element">
+                <fieldset>
+                <li>
+                <img src="Photos/BurgerKing.jpeg" alt="Food 1">
+                    <legend>Burger King</legend>
+                    <input type="radio" id="food1-1" name="food1" value="1">
+                    <label for="food1-1">1</label>
+                    <input type="radio" id="food1-2" name="food1" value="2">
+                    <label for="food1-2">2</label>
+                    <input type="radio" id="food1-3" name="food1" value="3">
+                    <label for="food1-3">3</label>
+                    <input type="radio" id="food1-4" name="food1" value="4">
+                    <label for="food1-4">4</label>
+                    <input type="radio" id="food1-5" name="food1" value="5">
+                    <label for="food1-5">5</label>
+                    <button type="button" onclick="submitForm()">Submit</button>
+                </li>
+            </fieldset>
+            </div>
+            <div class="element">
+                <fieldset>
+                <li>
+                <img src="Photos/BurgerSpace.jpeg" alt="Food 1">
+                    <legend>Burger Space</legend>
+                    <input type="radio" id="food1-1" name="food1" value="1">
+                    <label for="food1-1">1</label>
+                    <input type="radio" id="food1-2" name="food1" value="2">
+                    <label for="food1-2">2</label>
+                    <input type="radio" id="food1-3" name="food1" value="3">
+                    <label for="food1-3">3</label>
+                    <input type="radio" id="food1-4" name="food1" value="4">
+                    <label for="food1-4">4</label>
+                    <input type="radio" id="food1-5" name="food1" value="5">
+                    <label for="food1-5">5</label>
+                    <button type="button" onclick="submitForm()">Submit</button>
+                </li>
+            </fieldset>
+            </div>
+            <div class="element">
+                <fieldset>
+                <li>
+                <img src="Photos/AstroBurgers.jpeg" alt="Food 1">
+                    <legend>Astro Burgers</legend>
+                    <input type="radio" id="food1-1" name="food1" value="1">
+                    <label for="food1-1">1</label>
+                    <input type="radio" id="food1-2" name="food1" value="2">
+                    <label for="food1-2">2</label>
+                    <input type="radio" id="food1-3" name="food1" value="3">
+                    <label for="food1-3">3</label>
+                    <input type="radio" id="food1-4" name="food1" value="4">
+                    <label for="food1-4">4</label>
+                    <input type="radio" id="food1-5" name="food1" value="5">
+                    <label for="food1-5">5</label>
+                    <button type="button" onclick="submitForm()">Submit</button>
+                </li>
+            </fieldset>
+            </div>
+        </div>
+ </body>
+<script src="FoodRating.js"></script>
+</html>
